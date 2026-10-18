@@ -1,22 +1,643 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="vi" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dưỡng sinh An An - Trị Liệu Thảo Mộc & Thư Giãn Thân Tâm Trí</title>
-    <meta name="description" content="Chăm sóc thân - tâm - trí từ gốc, thuần tự nhiên theo y học cổ truyền. Gội đầu dưỡng sinh, massage trị liệu cổ vai gáy và thảo mộc tự nhiên." />
-    <meta property="og:title" content="Dưỡng sinh An An - Trị Liệu Thảo Mộc & Thư Giãn Thân Tâm Trí" />
-    <meta property="og:description" content="Chăm sóc thân - tâm - trí từ gốc, thuần tự nhiên theo y học cổ truyền. Gội đầu dưỡng sinh, massage trị liệu cổ vai gáy và thảo mộc tự nhiên." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body class="bg-[#FAF7F2] text-[#2C3E35] antialiased selection:bg-[#3D6A52]/20 selection:text-[#1F3A2B]">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dưỡng sinh An An - Chăm sóc Thân Tâm Trí thuần tự nhiên</title>
+  <meta name="description" content="Chăm sóc thân - tâm - trí từ gốc, thuần tự nhiên theo y học cổ truyền. Gội đầu dưỡng sinh canh thuốc, massage trị liệu cổ vai gáy, thảo mộc hữu cơ.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            sage: {
+              DEFAULT: '#3D6A52',
+              dark: '#2C4B3A',
+              light: '#538268',
+              50: '#F4F7F5',
+              100: '#E4ECE7',
+            },
+            warmbeige: {
+              DEFAULT: '#FAF7F2',
+              dark: '#EFE9DE',
+              100: '#F3EFE6',
+            },
+            wood: {
+              DEFAULT: '#8C6D53',
+              dark: '#5A3E2B',
+              deep: '#2C3E35',
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 
+  <!-- Google Fonts & FontAwesome 6 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background-color: #FAF7F2;
+      color: #2C3E35;
+    }
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF7F2] text-[#2C3E35] antialiased">
+
+  <!-- 1. HEADER / NAVBAR -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#3D6A52]/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-center gap-3">
+        <span class="w-10 h-10 rounded-full bg-[#3D6A52] text-white flex items-center justify-center font-serif text-xl font-bold shadow-sm">
+          An
+        </span>
+        <div>
+          <span class="font-serif font-bold text-xl sm:text-2xl text-[#2C3E35] tracking-wide block leading-none">
+            Dưỡng sinh An An
+          </span>
+          <span class="text-[10px] sm:text-[11px] text-[#3D6A52] font-semibold tracking-wider uppercase block mt-1">
+            Y Học Cổ Truyền · Thuần Tự Nhiên
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-[#2C3E35]/85">
+        <a href="#home" class="hover:text-[#3D6A52] transition-colors">Trang Chủ</a>
+        <a href="#about" class="hover:text-[#3D6A52] transition-colors">Về An An</a>
+        <a href="#services" class="hover:text-[#3D6A52] transition-colors">Dịch Vụ</a>
+        <a href="#knowledge" class="hover:text-[#3D6A52] transition-colors">Góc Sức Khỏe</a>
+        <a href="#products" class="hover:text-[#3D6A52] transition-colors">Sản Phẩm</a>
+        <a href="#testimonials" class="hover:text-[#3D6A52] transition-colors">Đánh Giá</a>
+        <a href="#contact" class="hover:text-[#3D6A52] transition-colors">Liên Hệ</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="flex items-center gap-3">
+        <a href="tel:0901234567" class="hidden md:inline-flex items-center gap-2 text-xs font-semibold text-[#3D6A52] bg-[#3D6A52]/10 px-3.5 py-2 rounded-full">
+          <i class="fa-solid fa-phone text-xs"></i>
+          <span>0901.234.567</span>
+        </a>
+        <a href="#contact" class="bg-[#3D6A52] hover:bg-[#2C4B3A] text-white text-xs sm:text-sm font-semibold px-5 py-2.5 rounded-full transition-all shadow-sm">
+          <i class="fa-solid fa-calendar-check mr-1.5"></i> Đặt Lịch Ngay
+        </a>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 text-[#2C3E35] text-xl" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#FAF7F2] border-b border-[#3D6A52]/20 px-6 py-6 shadow-xl">
+      <nav class="flex flex-col gap-3 font-medium text-base mb-6">
+        <a href="#home" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-[#3D6A52]/10">Trang Chủ</a>
+        <a href="#about" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-[#3D6A52]/10">Về An An</a>
+        <a href="#services" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-[#3D6A52]/10">Dịch Vụ</a>
+        <a href="#knowledge" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-[#3D6A52]/10">Góc Sức Khỏe</a>
+        <a href="#products" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-[#3D6A52]/10">Sản Phẩm</a>
+        <a href="#testimonials" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-[#3D6A52]/10">Đánh Giá</a>
+        <a href="#contact" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-[#3D6A52]/10">Liên Hệ Đặt Lịch</a>
+      </nav>
+      <a href="tel:0901234567" class="block w-full text-center bg-[#3D6A52] text-white py-3 rounded-xl font-semibold">
+        Hotline: 0901.234.567
+      </a>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section id="home" class="pt-32 sm:pt-40 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6 text-left">
+        <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#3D6A52]">
+          <span>Đông Y Trị Liệu</span> · <span>100% Thảo Mộc Tự Nhiên</span> · <span>Đả Thông Kinh Lạc</span>
+        </div>
+        <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-[#2C3E35] leading-tight">
+          Chăm sóc thân - tâm - trí từ gốc, thuần tự nhiên theo y học cổ truyền.
+        </h1>
+        <p class="text-base sm:text-lg text-[#2C3E35]/80 leading-relaxed max-w-2xl">
+          Tạm gác lại âu lo phố thị, ghé An An để tìm về sự tĩnh tại nguyên bản. Lắng nghe từng giọt canh thuốc ấm, mùi thơm bồ kết vỏ bưởi và đôi bàn tay lành nghề khơi thông kinh mạch, phục hồi cơ thể từ sâu bên trong.
+        </p>
+        <div class="pt-2 flex flex-wrap gap-4">
+          <a href="#contact" class="bg-[#3D6A52] hover:bg-[#2C4B3A] text-white px-7 py-3.5 rounded-full font-medium text-sm sm:text-base transition-all shadow-md inline-flex items-center gap-2">
+            <span>Đặt Lịch Tư Vấn</span>
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </a>
+          <a href="#services" class="bg-white hover:bg-[#FAF7F2] text-[#2C3E35] border border-[#3D6A52]/30 px-6 py-3.5 rounded-full font-medium text-sm sm:text-base transition-all inline-flex items-center gap-2">
+            <i class="fa-solid fa-spa text-[#3D6A52]"></i>
+            <span>Khám Phá Dịch Vụ</span>
+          </a>
+        </div>
+      </div>
+      <div class="lg:col-span-5 relative">
+        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] bg-[#E8E2D5]">
+          <img src="/src/assets/images/hero_duong_sinh_1792293943586.jpg" alt="Không gian Dưỡng sinh An An" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 Quality Metrics Strip -->
+    <div class="mt-16 pt-10 border-t border-[#3D6A52]/15 grid grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+      <div class="p-4 rounded-2xl bg-white/70 border border-[#3D6A52]/10">
+        <span class="font-serif text-3xl font-bold text-[#3D6A52] block">100%</span>
+        <span class="text-sm font-semibold text-[#2C3E35] block mt-1">Thảo Dược Bản Địa</span>
+        <span class="text-xs text-[#2C3E35]/70 block">Bồ kết, vỏ bưởi, ngải cứu nhung tuyển chọn</span>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/70 border border-[#3D6A52]/10">
+        <span class="font-serif text-3xl font-bold text-[#3D6A52] block">14+</span>
+        <span class="text-sm font-semibold text-[#2C3E35] block mt-1">Kinh Lạc & Huyệt Đạo</span>
+        <span class="text-xs text-[#2C3E35]/70 block">Kỹ thuật viên đào tạo chuẩn YHCT</span>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/70 border border-[#3D6A52]/10">
+        <span class="font-serif text-3xl font-bold text-[#3D6A52] block">18.000+</span>
+        <span class="text-sm font-semibold text-[#2C3E35] block mt-1">Khách Hàng Thư Thái</span>
+        <span class="text-xs text-[#2C3E35]/70 block">Giảm đau vai gáy và ngủ sâu trọn giấc</span>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/70 border border-[#3D6A52]/10">
+        <span class="font-serif text-3xl font-bold text-[#3D6A52] block">3</span>
+        <span class="text-sm font-semibold text-[#2C3E35] block mt-1">Cơ Sở Trị Liệu</span>
+        <span class="text-xs text-[#2C3E35]/70 block">Không gian thiền tịnh tại TP.HCM & Hà Nội</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. ABOUT US SECTION -->
+  <section id="about" class="py-20 bg-white border-y border-[#3D6A52]/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="text-xs font-semibold text-[#3D6A52] uppercase tracking-widest block mb-2">Triết Lý Y Học Cổ Truyền</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2C3E35] mb-4">Chăm Sóc Thân - Tâm - Trí Từ Gốc Rễ Tự Nhiên</h2>
+      <div class="w-16 h-0.5 bg-[#3D6A52] mx-auto mb-6"></div>
+      <p class="text-sm sm:text-base text-[#2C3E35]/75 max-w-2xl mx-auto mb-16 leading-relaxed">
+        Chúng tôi hiểu rằng một thân thể nhẹ nhõm khởi nguồn từ một tâm trí an yên và dòng khí huyết lưu thông thông suốt.
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-8 text-left">
+        <div class="p-8 rounded-3xl bg-[#FAF7F2] border border-[#3D6A52]/15">
+          <div class="w-14 h-14 rounded-2xl bg-[#3D6A52]/10 text-[#3D6A52] flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-[#2C3E35] mb-3">100% Thảo Mộc Tự Nhiên</h3>
+          <p className="text-sm text-[#2C3E35]/80 leading-relaxed">
+            Thu hái tại các vùng dược liệu bản địa Việt Nam. Đun sắc tươi mới trong ngày, không pha tạp hóa chất hay hương liệu tổng hợp.
+          </p>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-[#FAF7F2] border border-[#3D6A52]/15">
+          <div class="w-14 h-14 rounded-2xl bg-[#3D6A52]/10 text-[#3D6A52] flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-hand-holding-hand"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-[#2C3E35] mb-3">Kỹ Thuật Viên Chuẩn Y Học</h3>
+          <p class="text-sm text-[#2C3E35]/80 leading-relaxed">
+            Đội ngũ được đào tạo bài bản về đường kinh lạc, huyệt đạo trọng yếu (Bách Hội, Kiên Tỉnh, Phong Trì, Dũng Tuyền).
+          </p>
+        </div>
+
+        <div class="p-8 rounded-3xl bg-[#FAF7F2] border border-[#3D6A52]/15">
+          <div class="w-14 h-14 rounded-2xl bg-[#3D6A52]/10 text-[#3D6A52] flex items-center justify-center text-2xl mb-6">
+            <i class="fa-solid fa-bell-concierge"></i>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-[#2C3E35] mb-3">Chữa Lành Ngũ Quan</h3>
+          <p class="text-sm text-[#2C3E35]/80 leading-relaxed">
+            Hương thơm trầm ấm, tiếng nhạc thiền du dương, trà thảo mộc ngọt dịu và không gian riêng tư tách biệt phố thị ồn ào.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. SERVICES SECTION -->
+  <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-xs font-semibold text-[#3D6A52] uppercase tracking-widest block mb-2">Liệu Trình Trọng Điểm</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2C3E35] mb-4">Các Gói Trị Liệu Đông Y Nổi Bật</h2>
+      <div class="w-16 h-0.5 bg-[#3D6A52] mx-auto mb-4"></div>
+      <p class="text-sm sm:text-base text-[#2C3E35]/75">
+        Mỗi liệu trình được thiết kế chuẩn xác để giải phóng điểm tắc nghẽn kinh lạc và phục hồi thể trạng nhanh chóng.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 text-left">
+      <!-- Service 1 -->
+      <div class="bg-white rounded-3xl border border-[#3D6A52]/15 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/10] bg-[#FAF7F2] overflow-hidden">
+            <img src="/src/assets/images/service_herbal_hair_1792293944883.jpg" alt="Gội đầu dưỡng sinh" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex justify-between items-center text-xs text-[#3D6A52] font-semibold">
+              <span><i class="fa-regular fa-clock mr-1"></i>75 Phút</span>
+              <span class="bg-[#3D6A52]/10 px-2.5 py-0.5 rounded-full">Phổ biến nhất</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-[#2C3E35]">Gội Đầu Dưỡng Sinh Canh Thuốc</h3>
+            <p class="text-xs sm:text-sm text-[#2C3E35]/75 leading-relaxed">
+              Nấu từ bồ kết, vỏ bưởi tươi, sả chanh kết hợp ấn huyệt Bách Hội, Thái Dương, làm sạch gàu nấm và ngủ sâu giấc.
+            </p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <div class="pt-4 border-t border-[#FAF7F2] flex items-center justify-between">
+            <span class="font-serif text-xl font-bold text-[#3D6A52]">199.000đ</span>
+            <a href="#contact" class="bg-[#3D6A52] hover:bg-[#2C4B3A] text-white px-4 py-2 rounded-xl text-xs font-semibold">
+              Đặt Lịch Gói Này
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="bg-white rounded-3xl border border-[#3D6A52]/15 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/10] bg-[#FAF7F2] overflow-hidden">
+            <img src="/src/assets/images/service_neck_therapy_1792293944744.jpg" alt="Massage trị liệu cổ vai gáy" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex justify-between items-center text-xs text-[#3D6A52] font-semibold">
+              <span><i class="fa-regular fa-clock mr-1"></i>75 Phút</span>
+              <span class="bg-[#3D6A52]/10 px-2.5 py-0.5 rounded-full">Dân văn phòng</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-[#2C3E35]">Trị Liệu Cổ - Vai - Gáy & Lưng</h3>
+            <p class="text-xs sm:text-sm text-[#2C3E35]/75 leading-relaxed">
+              Giải cơ sâu kết hợp chườm túi ngải cứu nhung ấm nóng và muối hồng, giải phóng hoàn toàn điểm co cứng đốt sống cổ.
+            </p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <div class="pt-4 border-t border-[#FAF7F2] flex items-center justify-between">
+            <span class="font-serif text-xl font-bold text-[#3D6A52]">299.000đ</span>
+            <a href="#contact" class="bg-[#3D6A52] hover:bg-[#2C4B3A] text-white px-4 py-2 rounded-xl text-xs font-semibold">
+              Đặt Lịch Gói Này
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="bg-white rounded-3xl border border-[#3D6A52]/15 overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between">
+        <div>
+          <div class="aspect-[16/10] bg-[#FAF7F2] overflow-hidden">
+            <img src="/src/assets/images/service_foot_soak_1792293945513.jpg" alt="Ngâm chân thảo dược" class="w-full h-full object-cover">
+          </div>
+          <div class="p-6 space-y-3">
+            <div class="flex justify-between items-center text-xs text-[#3D6A52] font-semibold">
+              <span><i class="fa-regular fa-clock mr-1"></i>90 Phút</span>
+              <span class="bg-[#3D6A52]/10 px-2.5 py-0.5 rounded-full">Trục hàn bài độc</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-[#2C3E35]">Ngâm Chân Bấm Huyệt Toàn Thân</h3>
+            <p class="text-xs sm:text-sm text-[#2C3E35]/75 leading-relaxed">
+              Ngâm chân bồn gỗ pơ-mu với 18 vị thuốc bắc, bấm huyệt Dũng Tuyền thải độc tạng phủ và massage toàn thân thư thái.
+            </p>
+          </div>
+        </div>
+        <div class="p-6 pt-0">
+          <div class="pt-4 border-t border-[#FAF7F2] flex items-center justify-between">
+            <span class="font-serif text-xl font-bold text-[#3D6A52]">389.000đ</span>
+            <a href="#contact" class="bg-[#3D6A52] hover:bg-[#2C4B3A] text-white px-4 py-2 rounded-xl text-xs font-semibold">
+              Đặt Lịch Gói Này
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. KNOWLEDGE HUB -->
+  <section id="knowledge" class="py-20 bg-[#FAF7F2] border-t border-[#3D6A52]/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-semibold text-[#3D6A52] uppercase tracking-widest block mb-2">Góc Sức Khỏe Đông Y</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2C3E35] mb-4">Cẩm Nang Sống Khỏe Tự Nhiên</h2>
+        <div class="w-16 h-0.5 bg-[#3D6A52] mx-auto mb-4"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-[#3D6A52]/15">
+          <div class="w-12 h-12 rounded-2xl bg-[#3D6A52]/10 text-[#3D6A52] flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-moon"></i>
+          </div>
+          <span class="text-xs text-[#3D6A52] font-semibold uppercase">Giấc ngủ sâu</span>
+          <h3 class="font-serif text-lg font-bold text-[#2C3E35] mt-1 mb-2">Bấm 3 Huyệt Vàng Trước Khi Ngủ Để Dứt Điểm Mất Ngủ</h3>
+          <p class="text-xs text-[#2C3E35]/75 leading-relaxed mb-4">
+            Day ấn nhẹ huyệt An Miên (sau tai), Thần Môn (cổ tay) và Dũng Tuyền (lòng bàn chân) mỗi tối 5 phút giúp thanh tâm nhiệt, ngủ sâu không mộng mị.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-[#3D6A52]/15">
+          <div class="w-12 h-12 rounded-2xl bg-[#3D6A52]/10 text-[#3D6A52] flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-spa"></i>
+          </div>
+          <span class="text-xs text-[#3D6A52] font-semibold uppercase">Trục hàn khí</span>
+          <h3 class="font-serif text-lg font-bold text-[#2C3E35] mt-1 mb-2">Tại Sao Ngâm Chân Thảo Dược Tốt Hơn Dùng Thuốc Bổ?</h3>
+          <p class="text-xs text-[#2C3E35]/75 leading-relaxed mb-4">
+            Bàn chân chứa hơn 60 huyệt đạo liên kết lục phủ ngũ tạng. Nước gừng quế ấm giúp dẫn lưu máu về tim, làm ấm tạng thận và xua tan hàn ẩm.
+          </p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 sm:p-8 border border-[#3D6A52]/15">
+          <div class="w-12 h-12 rounded-2xl bg-[#3D6A52]/10 text-[#3D6A52] flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <span class="text-xs text-[#3D6A52] font-semibold uppercase">Cổ vai gáy</span>
+          <h3 class="font-serif text-lg font-bold text-[#2C3E35] mt-1 mb-2">Giải Tỏa Căng Cơ Cổ Vai Gáy Cho Dân Văn Phòng</h3>
+          <p class="text-xs text-[#2C3E35]/75 leading-relaxed mb-4">
+            Quy tắc làm việc 45-5 vươn vai, chườm túi ngải cứu ấm nóng 20 phút mỗi tối để chống thoái hóa đốt sống cổ và đau nửa đầu.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. PRODUCTS SECTION -->
+  <section id="products" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-xs font-semibold text-[#3D6A52] uppercase tracking-widest block mb-2">Sản Phẩm Thảo Mộc</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2C3E35] mb-4">Dưỡng Thân Tại Gia Cùng An An</h2>
+      <div class="w-16 h-0.5 bg-[#3D6A52] mx-auto mb-4"></div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
+      <!-- Prod 1 -->
+      <div class="bg-white rounded-3xl border border-[#3D6A52]/15 p-5 flex flex-col justify-between">
+        <div>
+          <div class="aspect-square rounded-2xl overflow-hidden bg-[#FAF7F2] mb-4">
+            <img src="/src/assets/images/product_herbal_shampoo_1792293945531.jpg" alt="Dầu gội bồ kết" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-serif font-bold text-base text-[#2C3E35] mb-1">Dầu Gội Bồ Kết & Vỏ Bưởi Cô Đặc (500ml)</h3>
+          <p class="text-xs text-[#2C3E35]/75 leading-relaxed mb-3">Nấu cô đặc 48h từ bồ kết, hương nhu, sả chanh. Sạch gàu, mượt tóc.</p>
+        </div>
+        <div class="pt-3 border-t border-[#FAF7F2] flex items-center justify-between">
+          <span class="font-serif font-bold text-lg text-[#3D6A52]">245.000đ</span>
+          <a href="#contact" class="bg-[#3D6A52] text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold">Mua Ngay</a>
+        </div>
+      </div>
+
+      <!-- Prod 2 -->
+      <div class="bg-white rounded-3xl border border-[#3D6A52]/15 p-5 flex flex-col justify-between">
+        <div>
+          <div class="aspect-square rounded-2xl overflow-hidden bg-[#FAF7F2] mb-4">
+            <img src="/src/assets/images/product_herbal_pouch_1792294016865.jpg" alt="Túi chườm ngải cứu" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-serif font-bold text-base text-[#2C3E35] mb-1">Túi Chườm Ngải Cứu Cổ Vai Gáy (1.2kg)</h3>
+          <p class="text-xs text-[#2C3E35]/75 leading-relaxed mb-3">Ngải cứu nhung sao muối hồng Himalaya. Giảm đau nhức cấp tốc.</p>
+        </div>
+        <div class="pt-3 border-t border-[#FAF7F2] flex items-center justify-between">
+          <span class="font-serif font-bold text-lg text-[#3D6A52]">280.000đ</span>
+          <a href="#contact" class="bg-[#3D6A52] text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold">Mua Ngay</a>
+        </div>
+      </div>
+
+      <!-- Prod 3 -->
+      <div class="bg-white rounded-3xl border border-[#3D6A52]/15 p-5 flex flex-col justify-between">
+        <div>
+          <div class="aspect-square rounded-2xl overflow-hidden bg-[#FAF7F2] mb-4">
+            <img src="/src/assets/images/product_herbal_shampoo_1792293945531.jpg" alt="Tinh dầu trầm hương" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-serif font-bold text-base text-[#2C3E35] mb-1">Tinh Dầu Trầm Hương Sả Chanh (30ml)</h3>
+          <p class="text-xs text-[#2C3E35]/75 leading-relaxed mb-3">Chưng cất hơi nước tinh khiết. An thần, xua côn trùng, thơm mát phòng.</p>
+        </div>
+        <div class="pt-3 border-t border-[#FAF7F2] flex items-center justify-between">
+          <span class="font-serif font-bold text-lg text-[#3D6A52]">185.000đ</span>
+          <a href="#contact" class="bg-[#3D6A52] text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold">Mua Ngay</a>
+        </div>
+      </div>
+
+      <!-- Prod 4 -->
+      <div class="bg-white rounded-3xl border border-[#3D6A52]/15 p-5 flex flex-col justify-between">
+        <div>
+          <div class="aspect-square rounded-2xl overflow-hidden bg-[#FAF7F2] mb-4">
+            <img src="/src/assets/images/product_herbal_pouch_1792294016865.jpg" alt="Trà dưỡng nhan bát bảo" class="w-full h-full object-cover">
+          </div>
+          <h3 class="font-serif font-bold text-base text-[#2C3E35] mb-1">Trà Dưỡng Sinh Bát Bảo Thảo Mộc (20 gói)</h3>
+          <p class="text-xs text-[#2C3E35]/75 leading-relaxed mb-3">Táo đỏ, kỷ tử, hoa cúc tuyết, long nhãn. Bổ khí huyết, nhuận sắc mặt.</p>
+        </div>
+        <div class="pt-3 border-t border-[#FAF7F2] flex items-center justify-between">
+          <span class="font-serif font-bold text-lg text-[#3D6A52]">165.000đ</span>
+          <a href="#contact" class="bg-[#3D6A52] text-white px-3.5 py-1.5 rounded-lg text-xs font-semibold">Mua Ngay</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. TESTIMONIALS SECTION -->
+  <section id="testimonials" class="py-20 bg-white border-y border-[#3D6A52]/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <span class="text-xs font-semibold text-[#3D6A52] uppercase tracking-widest block mb-2">Đánh Giá Thực Tế</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2C3E35] mb-4">Cảm Nhận Từ Khách Hàng</h2>
+        <div class="w-16 h-0.5 bg-[#3D6A52] mx-auto mb-4"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-[#FAF7F2] p-6 rounded-3xl border border-[#3D6A52]/15">
+          <div class="text-[#C5A880] text-xs mb-3">★★★★★</div>
+          <p class="text-xs sm:text-sm text-[#2C3E35]/85 italic mb-6">
+            "Mình ngồi máy tính 10h/ngày, vai gáy cứng như đá. Sau 75 phút tại An An với túi chườm ngải cứu ấm nóng, các cơ như được tháo gỡ hoàn toàn. Kỹ thuật viên ấn huyệt cực chuẩn."
+          </p>
+          <div class="border-t border-[#3D6A52]/10 pt-3">
+            <h4 class="font-serif font-bold text-sm text-[#2C3E35]">Chị Mai Lan</h4>
+            <p class="text-[11px] text-[#2C3E35]/60">Trưởng phòng Marketing, Techcombank</p>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF7F2] p-6 rounded-3xl border border-[#3D6A52]/15">
+          <div class="text-[#C5A880] text-xs mb-3">★★★★★</div>
+          <p class="text-xs sm:text-sm text-[#2C3E35]/85 italic mb-6">
+            "Tôi mất ngủ nhiều năm, đêm trằn trọc. Được con gái tặng buổi ngâm chân thảo dược và gội đầu canh thuốc, tối về ngủ một mạch tới 6h sáng. Không gian thanh tịnh rất dễ chịu."
+          </p>
+          <div class="border-t border-[#3D6A52]/10 pt-3">
+            <h4 class="font-serif font-bold text-sm text-[#2C3E35]">Bác Minh Đức</h4>
+            <p class="text-[11px] text-[#2C3E35]/60">Cựu giáo viên THPT, 62 tuổi</p>
+          </div>
+        </div>
+
+        <div class="bg-[#FAF7F2] p-6 rounded-3xl border border-[#3D6A52]/15">
+          <div class="text-[#C5A880] text-xs mb-3">★★★★★</div>
+          <p class="text-xs sm:text-sm text-[#2C3E35]/85 italic mb-6">
+            "Nước gội ở đây thơm mùi bồ kết và vỏ bưởi chuẩn ngày xưa mẹ nấu. Tóc gội xong mềm tơi tự nhiên chứ không bết. Mình đã mua thêm chai dầu gội về dùng tại nhà."
+          </p>
+          <div class="border-t border-[#3D6A52]/10 pt-3">
+            <h4 class="font-serif font-bold text-sm text-[#2C3E35]">Chị Thanh Trúc</h4>
+            <p class="text-[11px] text-[#2C3E35]/60">Freelance Designer, 28 tuổi</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. BOOKING & CONTACT FORM -->
+  <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <div class="text-center max-w-3xl mx-auto mb-14">
+      <span class="text-xs font-semibold text-[#3D6A52] uppercase tracking-widest block mb-2">Đặt Lịch & Liên Hệ</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2C3E35] mb-4">Đăng Ký Trải Nghiệm Liệu Trình</h2>
+      <div class="w-16 h-0.5 bg-[#3D6A52] mx-auto mb-4"></div>
+      <p class="text-sm text-[#2C3E35]/75">An An sẽ liên hệ xác nhận trong vòng 5 phút.</p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8 items-start text-left">
+      <!-- Form Box -->
+      <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-[#3D6A52]/20 shadow-md">
+        <form id="standalone-booking-form" class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase mb-1">Họ và tên *</label>
+              <input type="text" id="cust-name" required placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm focus:outline-none focus:border-[#3D6A52]">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold uppercase mb-1">Số điện thoại *</label>
+              <input type="tel" id="cust-phone" required placeholder="0901 234 567" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm focus:outline-none focus:border-[#3D6A52]">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase mb-1">Gói dịch vụ quan tâm *</label>
+            <select id="cust-service" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm focus:outline-none focus:border-[#3D6A52]">
+              <option value="Gội Đầu Dưỡng Sinh Thảo Dược">Gội Đầu Dưỡng Sinh Thảo Dược (75 Phút - 199.000đ)</option>
+              <option value="Trị Liệu Cổ Vai Gáy & Lưng">Trị Liệu Cổ - Vai - Gáy & Lưng (75 Phút - 299.000đ)</option>
+              <option value="Ngâm Chân Toàn Thân Thảo Dược">Ngâm Chân Toàn Thân Thảo Dược (90 Phút - 389.000đ)</option>
+            </select>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold uppercase mb-1">Ngày hẹn *</label>
+              <input type="date" id="cust-date" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm focus:outline-none focus:border-[#3D6A52]">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold uppercase mb-1">Khung giờ *</label>
+              <select id="cust-time" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm focus:outline-none focus:border-[#3D6A52]">
+                <option value="09:00">09:00 Sáng</option>
+                <option value="10:30">10:30 Sáng</option>
+                <option value="14:00">14:00 Chiều</option>
+                <option value="17:30">17:30 Chiều</option>
+                <option value="19:00">19:00 Tối</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase mb-1">Ghi chú (Tùy chọn)</label>
+            <textarea id="cust-note" rows="2" placeholder="Tình trạng đau mỏi vai gáy hoặc lưu ý đặc biệt..." class="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm resize-none focus:outline-none focus:border-[#3D6A52]"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-[#3D6A52] hover:bg-[#2C4B3A] text-white py-4 rounded-xl font-semibold text-sm transition-all shadow-md">
+            Gửi Yêu Cầu Đặt Lịch
+          </button>
+        </form>
+
+        <div id="booking-success-box" class="hidden text-center py-6 space-y-4">
+          <div class="w-16 h-16 rounded-full bg-[#3D6A52]/10 text-[#3D6A52] flex items-center justify-center text-3xl mx-auto">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <h3 class="font-serif text-2xl font-bold text-[#2C3E35]">Đặt Lịch Thành Công!</h3>
+          <p id="booking-msg" class="text-sm text-[#2C3E35]/80"></p>
+        </div>
+      </div>
+
+      <!-- Contact Info & Map Box -->
+      <div class="lg:col-span-5 space-y-6">
+        <div class="bg-white rounded-3xl p-6 border border-[#3D6A52]/15 shadow-sm space-y-3">
+          <h3 class="font-serif font-bold text-lg text-[#2C3E35]">Thông Tin Liên Hệ</h3>
+          <p class="text-xs text-[#2C3E35]/80"><i class="fa-solid fa-location-dot text-[#3D6A52] mr-2"></i> Số 123 Đường Hoa Lan, Phường 2, Quận Phú Nhuận, TP.HCM</p>
+          <p class="text-xs text-[#2C3E35]/80"><i class="fa-solid fa-phone text-[#3D6A52] mr-2"></i> Hotline 24/7: 0901.234.567</p>
+          <p class="text-xs text-[#2C3E35]/80"><i class="fa-solid fa-clock text-[#3D6A52] mr-2"></i> Giờ mở cửa: 08:30 - 21:30 hàng ngày</p>
+        </div>
+
+        <div class="bg-white rounded-3xl p-6 border border-[#3D6A52]/15 shadow-sm space-y-3">
+          <h4 class="font-serif font-bold text-sm text-[#2C3E35]">Bản Đồ Chỉ Đường</h4>
+          <div class="rounded-2xl overflow-hidden aspect-[16/9] bg-[#E8E2D5] flex items-center justify-center text-center p-4">
+            <div>
+              <i class="fa-solid fa-map-location-dot text-3xl text-[#3D6A52] mb-2 block"></i>
+              <span class="text-xs font-semibold text-[#2C3E35]">Dưỡng Sinh An An - Cơ sở Phú Nhuận</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FOOTER -->
+  <footer class="bg-[#2C3E35] text-white/80 py-16 px-4 sm:px-6 lg:px-8 border-t border-white/10 text-left">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 pb-12 border-b border-white/10">
+      <div class="space-y-3">
+        <h4 class="font-serif text-2xl font-bold text-white">Dưỡng sinh An An</h4>
+        <p class="text-xs text-white/70 italic">"Chăm sóc thân - tâm - trí từ gốc, thuần tự nhiên theo y học cổ truyền."</p>
+      </div>
+      <div>
+        <h5 class="font-serif font-bold text-white text-sm uppercase mb-3">Thời Gian Phục Vụ</h5>
+        <p class="text-xs text-white/70">Thứ 2 - Chủ Nhật: 08:30 - 21:30</p>
+        <p class="text-xs text-white/50 mt-1">Nhận ca cuối lúc 20:00</p>
+      </div>
+      <div>
+        <h5 class="font-serif font-bold text-white text-sm uppercase mb-3">Hotline Tư Vấn</h5>
+        <p class="text-xs text-[#C5A880] font-bold">0901.234.567</p>
+        <p class="text-xs text-white/70 mt-1">CS1: Quận 1, TP.HCM</p>
+        <p class="text-xs text-white/70">CS2: Ba Đình, Hà Nội</p>
+      </div>
+      <div>
+        <h5 class="font-serif font-bold text-white text-sm uppercase mb-3">Kết Nối Với An An</h5>
+        <div class="flex gap-3">
+          <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#3D6A52] text-white flex items-center justify-center text-xs"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#3D6A52] text-white flex items-center justify-center text-xs"><i class="fa-solid fa-comment-dots"></i></a>
+          <a href="#" class="w-8 h-8 rounded-full bg-white/10 hover:bg-[#3D6A52] text-white flex items-center justify-center text-xs"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto pt-6 text-center text-xs text-white/50">
+      © 2026 Dưỡng sinh An An. All rights reserved. Thuần tự nhiên · Y học cổ truyền.
+    </div>
+  </footer>
+
+  <!-- Vanilla JS Interactions -->
+  <script>
+    // 1. Mobile Menu Toggle
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
+    });
+
+    // 2. Set default tomorrow date for booking
+    const dateInput = document.getElementById('cust-date');
+    if (dateInput) {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      dateInput.value = tomorrow.toISOString().split('T')[0];
+    }
+
+    // 3. Form Submit Handler
+    const bookingForm = document.getElementById('standalone-booking-form');
+    const successBox = document.getElementById('booking-success-box');
+    const bookingMsg = document.getElementById('booking-msg');
+
+    bookingForm?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('cust-name').value;
+      const phone = document.getElementById('cust-phone').value;
+      const service = document.getElementById('cust-service').value;
+      const date = document.getElementById('cust-date').value;
+      const time = document.getElementById('cust-time').value;
+
+      bookingForm.classList.add('hidden');
+      successBox.classList.remove('hidden');
+      bookingMsg.innerHTML = 'Cảm ơn quý khách <strong>' + name + '</strong> (' + phone + '). An An đã tiếp nhận lịch hẹn gói <strong>' + service + '</strong> lúc <strong>' + time + ' ngày ' + date + '</strong>.';
+    });
+  </script>
+</body>
+</html>
