@@ -144,14 +144,16 @@
           </a>
         </div>
       </div>
+      
       <!-- Hero Image with Branded Label -->
       <div class="lg:col-span-5 relative">
         <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] bg-[#E8E2D5] relative group">
           <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1000&q=80" alt="Không gian Dưỡng sinh An An" class="w-full h-full object-cover">
-          <!-- Branded Floating Label -->
-          <div class="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-[#3D6A52]/20 flex items-center justify-between">
+          
+          <!-- Nhãn hiệu thương hiệu hiển thị nổi trên ảnh -->
+          <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md px-4 py-3 rounded-2xl shadow-lg border border-[#3D6A52]/20 flex items-center justify-between">
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-xl bg-[#3D6A52] text-white flex items-center justify-center font-serif font-bold text-sm">
+              <div class="w-10 h-10 rounded-xl bg-[#3D6A52] text-white flex items-center justify-center font-serif font-bold text-sm shadow-sm">
                 An
               </div>
               <div>
@@ -159,7 +161,7 @@
                 <span class="text-[11px] text-[#3D6A52] font-medium block">Thuần Tự Nhiên · 100% Bồ Kết & Vỏ Bưởi</span>
               </div>
             </div>
-            <span class="text-xs font-bold text-white bg-[#3D6A52] px-2.5 py-1 rounded-full shadow-xs">Độc quyền</span>
+            <span class="text-[11px] font-bold text-white bg-[#3D6A52] px-2.5 py-1 rounded-full shadow-xs">Độc quyền</span>
           </div>
         </div>
       </div>
@@ -399,11 +401,11 @@
         </div>
       </div>
 
-      <!-- Prod 2: Túi chườm ngải cứu (Đã fix lỗi hiển thị ảnh rõ ràng) -->
+      <!-- Prod 2: Túi chườm ngải cứu (Đã sửa hiển thị ảnh rõ ràng) -->
       <div class="bg-white rounded-3xl border border-[#3D6A52]/15 p-5 flex flex-col justify-between">
         <div>
           <div class="aspect-square rounded-2xl overflow-hidden bg-[#FAF7F2] mb-4">
-            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=500&q=80" alt="Túi chườm ngải cứu" class="w-full h-full object-cover">
+            <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=500&q=80" alt="Túi chườm ngải cứu" class="w-full h-full object-cover">
           </div>
           <h3 class="font-serif font-bold text-base text-[#2C3E35] mb-1">Túi Chườm Ngải Cứu Cổ Vai Gáy (1.2kg)</h3>
           <p class="text-xs text-[#2C3E35]/75 leading-relaxed mb-3">Ngải cứu nhung sao muối hồng Himalaya. Giảm đau nhức cấp tốc.</p>
@@ -515,88 +517,3 @@
               <input type="tel" id="cust-phone" required placeholder="0901 234 567" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm focus:outline-none focus:border-[#3D6A52]">
             </div>
           </div>
-
-          <div>
-            <label class="block text-xs font-semibold uppercase mb-1">Gói dịch vụ quan tâm *</label>
-            <select id="cust-service" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm focus:outline-none focus:border-[#3D6A52]">
-              <option value="Gội Đầu Dưỡng Sinh Thảo Dược">Gội Đầu Dưỡng Sinh Thảo Dược (75 Phút - 199.000đ)</option>
-              <option value="Trị Liệu Cổ Vai Gáy & Lưng">Trị Liệu Cổ - Vai - Gáy & Lưng (75 Phút - 299.000đ)</option>
-              <option value="Ngâm Chân Toàn Thân Thảo Dược">Ngâm Chân Toàn Thân Thảo Dược (90 Phút - 389.000đ)</option>
-            </select>
-          </div>
-
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-xs font-semibold uppercase mb-1">Ngày hẹn *</label>
-              <input type="date" id="cust-date" required class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm focus:outline-none focus:border-[#3D6A52]">
-            </div>
-            <div>
-              <label class="block text-xs font-semibold uppercase mb-1">Khung giờ *</label>
-              <select id="cust-time" class="w-full px-4 py-3 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm focus:outline-none focus:border-[#3D6A52]">
-                <option value="09:00">09:00 Sáng</option>
-                <option value="10:30">10:30 Sáng</option>
-                <option value="14:00">14:00 Chiều</option>
-                <option value="17:30">17:30 Chiều</option>
-                <option value="19:00">19:00 Tối</option>
-              </select>
-            </div>
-          </div>
-
-          <div>
-            <label class="block text-xs font-semibold uppercase mb-1">Ghi chú (Tùy chọn)</label>
-            <textarea id="cust-note" rows="2" placeholder="Tình trạng đau mỏi vai gáy hoặc lưu ý đặc biệt..." class="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-[#FAF7F2]/40 text-sm resize-none focus:outline-none focus:border-[#3D6A52]"></textarea>
-          </div>
-
-          <button type="submit" class="w-full bg-[#3D6A52] hover:bg-[#2C4B3A] text-white py-4 rounded-xl font-semibold text-sm transition-all shadow-md">
-            Gửi Yêu Cầu Đặt Lịch
-          </button>
-        </form>
-
-        <div id="booking-success-box" class="hidden text-center py-6 space-y-4">
-          <div class="w-16 h-16 rounded-full bg-[#3D6A52]/10 text-[#3D6A52] flex items-center justify-center text-3xl mx-auto">
-            <i class="fa-solid fa-check"></i>
-          </div>
-          <h3 class="font-serif text-2xl font-bold text-[#2C3E35]">Đặt Lịch Thành Công!</h3>
-          <p id="booking-msg" class="text-sm text-[#2C3E35]/80"></p>
-        </div>
-      </div>
-
-      <!-- Contact Info & Map Box -->
-      <div class="lg:col-span-5 space-y-6">
-        <div class="bg-white rounded-3xl p-6 border border-[#3D6A52]/15 shadow-sm space-y-3">
-          <h3 class="font-serif font-bold text-lg text-[#2C3E35]">Thông Tin Liên Hệ</h3>
-          <p class="text-xs text-[#2C3E35]/80"><i class="fa-solid fa-location-dot text-[#3D6A52] mr-2"></i> Số 18 Ngõ 68 Cầu Giấy, Quan Hoa, Cầu Giấy, Hà Nội</p>
-          <p class="text-xs text-[#2C3E35]/80"><i class="fa-solid fa-phone text-[#3D6A52] mr-2"></i> Hotline: 0901.234.567</p>
-          <p class="text-xs text-[#2C3E35]/80"><i class="fa-solid fa-clock text-[#3D6A52] mr-2"></i> Mở cửa: 09:00 - 21:00 (Thứ Hai - Chủ Nhật)</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-[#2C3E35] text-white py-10 mt-20 text-center text-xs">
-    <p>© 2026 Dưỡng Sinh An An. Bài kiểm tra điều kiện thiết kế Web Landing Page.</p>
-  </footer>
-
-  <script>
-    function handleFormSubmit(e) {
-      e.preventDefault();
-      const name = document.getElementById('cust-name').value;
-      const service = document.getElementById('cust-service').value;
-      const date = document.getElementById('cust-date').value;
-      
-      document.getElementById('standalone-booking-form').style.display = 'none';
-      const successBox = document.getElementById('booking-success-box');
-      successBox.classList.remove('hidden');
-      document.getElementById('booking-msg').innerText = `Cảm ơn ${name}! Chúng tôi đã nhận lịch hẹn gói "${service}" vào ngày ${date}. An An sẽ gọi điện xác nhận trong ít phút tới.`;
-    }
-
-    // Mobile menu toggle
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    mobileBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
-</body>
-</html>
