@@ -1,0 +1,6 @@
+{
+  "name": "Dưỡng sinh An An - Trị Liệu Thảo Mộc",
+  "description": "Chăm sóc thân - tâm - trí từ gốc, thuần tự nhiên theo y học cổ truyền. Gội đầu dưỡng sinh, massage trị liệu cổ vai gáy và thảo mộc tự nhiên.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
